@@ -1,0 +1,12 @@
+:root {
+    box-sizing : border-box;
+}
+
+* {
+    box-sizing : inherit;
+}
+
+body{
+    font-family : "Oswald", "Raleway", "sans-serif";
+    height: 100%;
+}
