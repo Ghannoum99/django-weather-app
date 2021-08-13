@@ -11,7 +11,7 @@
     box-sizing : inherit;
  }
 
-body, h1 {
+body, h1,p {
     font-family : 'Atkinson Hyperlegible', 'sans-serif';
 }
 
@@ -51,10 +51,10 @@ footer {
 
 .card {
     margin: 0 auto;
-    margin-top: 2.5em;
+    margin-top: 5em;
     padding: 5px 30px;
     width: 315px;
-    height: 380px;
+    height: 200px;
     border-radius: 3px;
     background-color: #fff;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, .2);
@@ -67,7 +67,7 @@ footer {
         height: 0;
     }
     to {
-        height: 470px;
+        height: 200px;
     }
 }
 
@@ -79,7 +79,7 @@ h1 {
     float: right;
     color: #666;
     font-weight: 300;
-    font-size: 3.39em;
+    font-size: 2.69em;
     line-height: .2em;
     -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .2s;
 }
@@ -92,6 +92,7 @@ h2 {
 
 h3 {
     float: left;
+    margin-top : 10px;
     margin-right: 33px;
     color: #777;
     font-weight: 400;
@@ -111,8 +112,8 @@ span span {
 
 .sky {
     position: relative;
-    top : -340px;
-    left : 170px;
+    top : -330px;
+    left : 150px;
     width: 120px;
     height: 100px;
     display : hide;

@@ -24,7 +24,7 @@
             <div class="container-fluid w3-animate-top">
                 <div class="w3-display-middle">
                     <p>
-                        Weather App
+                        How's The Weather Today
                     </p>
                 </div>
                 <span>
@@ -46,31 +46,19 @@
         <div class="card">
             {% if country_code and coordinate and temp and pressure and humidity %}
             <h2>{{country_code}}</h2>
-            <h1>{{temp}} &deg;</h1>
-            <h3>Humidity: {{humidity}}%</h3>
-            <h3>Coordinates [X,Y] : {{coordinate}}</h3>
-            <h3>Pressure : {{pressure}}</h3>
-            <h3>Forecast : {{main}}
-                <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="Image" style="width:70px">
+            <h1>{{temp}}&deg;C</h1>
+            <h3>Humidity: {{humidity}}%<br>
+                Forecast : {{main}}
+                    <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="Image" style="width:70px">
             </h3>
-            <h3>Description : {{description}}</h3>
             {% endif %}
-            <div class="sky">
-                <div class="sun"></div>
-                <div class="cloud">
-                    <div class="circle-small"></div>
-                    <div class="circle-tall"></div>
-                    <div class="circle-medium"></div>
-                </div>
-
-            </div>
         </div>
     </section>
     <footer class="mainFooter">
         <nav class="navbar navbar-dark bg-primary" id="navBar">
             <div class="container-fluid container">
                 <p class="navbar-brand">
-                    &copy; J.Ghannoum-2021
+                    &copy; J.Ghannoum - 2021
                 </p>
                 <div class="social-menu">
                     <ul>
