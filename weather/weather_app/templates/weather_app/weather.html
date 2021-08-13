@@ -11,424 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="icon" href="{% static 'media/images/cloudy.png' %}">
+    <link rel="icon" href="{% static '/media/images/cloudy.png' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
-        :root {
-            --mywhite : #FCFFFA;
-            box-sizing : border-box;
-        }
-
-        * {
-            box-sizing : inherit;
-
-        }
-
-        body{
-            height: 100%;
-        }
-
-        body, h1 {
-            font-family : 'Atkinson Hyperlegible', 'sans-serif';
-        }
-
-        p {
-            text-align : center;
-            margin-left : 2.9em;
-            font-size : 18pt;
-            color : var(--mywhite);
-        }
-
-        .pageContent {
-            margin-top : 0;
-            height : 100%;
-        }
-
-        .container {
-            height : 3em;
-            position : relative;
-
-        }
-
-        .container form {
-            margin : 0;
-            position : absolute;
-            top: 50%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%);
-        }
-
-        input {
-            min-width : 400px;
-        }
-
-.card {
-    margin: 0 auto;
-    margin-top: 1%;
-    padding: 5px 30px;
-    width: 315px;
-    height: 470px;
-    border-radius: 3px;
-    background-color: #fff;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, .2);
-    -webkit-animation: open 2s cubic-bezier(.39, 0, .38, 1);
-}
-
-@-webkit-keyframes open {
-    from {
-        padding: 0 30px;
-        height: 0;
-    }
-    to {
-        height: 470px;
-    }
-}
-
-h1,
-h2,
-h3,
-h4 {
-    position: relative;
-}
-
-h1 {
-    margin-top : 0.4em;
-    float: right;
-    color: #666;
-    font-weight: 300;
-    font-size: 3.32em;
-    line-height: .2em;
-    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .2s;
-}
-
-h2 {
-    font-weight: 300;
-    font-size: 2.25em;
-    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1);
-}
-
-h3 {
-    float: left;
-    margin-right: 33px;
-    color: #777;
-    font-weight: 400;
-    font-size: 1em;
-    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .1s;
-}
-
-span {
-    margin-left: 24px;
-    color: #999;
-    font-weight: 300;
-}
-
-span span {
-    margin-left: 0;
-}
-
-.sky {
-    position: relative;
-    margin-top: 60px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #03A9F4;
-    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .2s;
-}
-
-.sun {
-    position: relative;
-    top: -3px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background-color: #FFEB3B;
-    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .5s;
-}
-
-.cloud {
-    position: absolute;
-    top: 60px;
-    left: 30px;
-    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .7s;
-}
-
-.cloud:before,
-.cloud:after {
-    position: absolute;
-    display: block;
-    content: "";
-}
-
-.cloud:before {
-    margin-left: -10px;
-    width: 51px;
-    height: 18px;
-    background: #fff;
-}
-
-.cloud:after {
-    position: absolute;
-    top: -10px;
-    left: -22px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 50px -6px 0 6px #fff, 25px -19px 0 10px #fff;
-}
-
-table {
-    margin-top : 0;
-    position: relative;
-    top: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-tr:nth-child(1) td:nth-child(1),
-tr:nth-child(1) td:nth-child(2),
-tr:nth-child(1) td:nth-child(3),
-tr:nth-child(1) td:nth-child(4),
-tr:nth-child(1) td:nth-child(5) {
-    padding-bottom: 32px;
-    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .7s;
-}
-
-tr:nth-child(2) td:nth-child(1),
-tr:nth-child(2) td:nth-child(2),
-tr:nth-child(2) td:nth-child(3),
-tr:nth-child(2) td:nth-child(4),
-tr:nth-child(2) td:nth-child(5) {
-    padding-bottom: 7px;
-    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .9s;
-}
-
-tr:nth-child(3) td:nth-child(1),
-tr:nth-child(3) td:nth-child(2),
-tr:nth-child(3) td:nth-child(3),
-tr:nth-child(3) td:nth-child(4),
-tr:nth-child(3) td:nth-child(5) {
-    padding-bottom: 7px;
-    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .9s;
-}
-
-tr:nth-child(2),
-tr:nth-child(3) {
-    font-size: .9em;
-}
-
-tr:nth-child(3) {
-    color: #999;
-}
-
-@-webkit-keyframes up {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(15px);
-    }
-    50% {
-        opacity: 0;
-        -webkit-transform: translateY(15px);
-    }
-    99% {
-        -webkit-animation-play-state: paused;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-        .row {
-            margin-top : 2.5em;
-        }
-
-        .weather-cloudAndSun{
-				width: 200px;
-				height: 200px;
-				display: inline-block;
-				position: relative;
-			}
-
-			.weather-cloudAndSun,.weather-rain{
-				margin-left: 60px;
-			}
-
-			.sun{
-				width: 100px;
-				height: 100px;
-				background: linear-gradient(45deg,#F3A966,yellow);
-				border-radius: 100%;
-				transform: rotate(0deg);
-				animation: xuanzhuang 12s infinite linear;
-				position: absolute;
-				left: 50%;
-				top: 50%;
-			}
-
-			.rays{
-				width: 8px;
-				height: 15px;
-				background: yellow;
-				position: absolute;
-				transform: translateX(-50%);
-				left: 50%;
-				top: -25px;
-				box-shadow: 0 135px yellow;
-				border-radius: 4px;
-				transform-origin: 0px 75px;
-			}
-
-			.rays:nth-child(2){
-				transform: rotate(45deg);
-			}
-
-			.rays:nth-child(3){
-				transform: rotate(90deg);
-			}
-
-			.rays:nth-child(4){
-				transform: rotate(135deg);
-			}
-
-			@keyframes xuanzhuang {
-				100% { transform: rotate(360deg); }
-			}
-
-
-			.cloud{
-				border-radius: 25px;
-				position: absolute;
-				top: 70%;
-				left: 50%;
-				width: 150px;
-				height: 50px;
-				background: #cdedf8;
-			}
-
-			.cloud:nth-child(2){
-				left: 200px;
-				width: 100px;
-				height: 30px;
-				background: #cdedf8;
-				opacity: 1;
-				animation: cloud 8s linear infinite;
-			}
-
-			.cloud::after,.cloud::before{
-				content: '';
-				display: block;
-				background: #cdedf8;
-				border-radius: 50%;
-				position: absolute;
-
-			}
-
-			.cloud:nth-child(2)::after,.cloud:nth-child(2)::before{
-				content: '';
-				display: block;
-				background: #cdedf8;
-				border-radius: 50%;
-				position: absolute;
-
-			}
-
-			.cloud::after{
-				width: 80px;
-				height: 80px;
-				left: 45px;
-				top: -45px;
-			}
-
-			.cloud::before{
-				width: 60px;
-				height: 60px;
-				top: -10px;
-				left: 0;
-			}
-
-			.cloud:nth-child(2)::after{
-				width: 50px;
-				height: 50px;
-				left: 35px;
-				top: -30px;
-			}
-
-			.cloud:nth-child(2)::before{
-				width: 40px;
-				height: 40px;
-				top: -10px;
-				left: 0px;
-			}
-
-			@keyframes cloud {
-				0% { opacity: 0; }
-				50% { opacity: 1; }
-				100% {
-					opacity: 0;
-					transform: scale(0.8) translateX(-200%);
-				}
-			}
-			.f{
-				width: 28px;
-				height: 10px;
-				border-radius: 5px;
-				position: absolute;
-				background: #CDEDF8;
-				top: -45px;
-				left: 25px;
-				box-shadow: 0px 90px #CDEDF8,72px 90px #CDEDF8,72px 0px #CDEDF8;
-			}
-
-			.f::after,.f::before{
-				content: '';
-				width: 28px;
-				height: 10px;
-				transform: rotate(60deg);
-				border-radius: 5px;
-				position: absolute;
-				background: #CDEDF8;
-				top: -10px;
-				left: 55px;
-				box-shadow: 0px 90px #CDEDF8,72px 90px #CDEDF8,72px 0px #CDEDF8;
-			}
-
-			.f::before{
-				transform: rotate(120deg);
-				left: 15px;
-				box-shadow: 72px 0px #CDEDF8,72px -90px #CDEDF8,0px -90px #CDEDF8;
-			}
-
-			@keyframes Rotate {
-				100% { transform: rotate(360deg); }
-			}
-
-			.weather-cloudAndSun .cloud{
-				z-index: 1;
-				opacity: 0.95;
-			}
-
-			.weather-cloudAndSun .sun{
-				position: absolute;
-				left: 180px;
-				top: 60px;
-				z-index: 0;
-			}
-
-			@keyframes rainning{
-				100%{
-					top: 200px;
-				}
-			}
-
-    </style>
-    </head>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+            <!-- Social media icons -->
+        <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+</head>
     <body>
     <header class="mainHeader">
         <nav class="navbar navbar-dark bg-primary">
@@ -438,20 +27,8 @@ tr:nth-child(3) {
                         Weather App
                     </p>
                 </div>
-                <!--
-                <div class="weather-cloudAndSun">
-				<div class="cloud"></div>
-				<div class="sun">
-					<div class="rays"></div>
-					<div class="rays"></div>
-					<div class="rays"></div>
-					<div class="rays"></div>
-				</div>
-
-			</div>
-			-->
                 <span>
-                    <img src="{% static 'media/images/cloudy.png' %}" alt="" width="150" height="150" class="d-inline-block align-text-top">
+                    <img src="{% static 'media/images/cloudy.png' %}" alt="" width="100" height="100" class="d-inline-block align-text-top">
                 </span>
             </div>
         </nav>
@@ -468,16 +45,16 @@ tr:nth-child(3) {
         </nav>
         <div class="card">
             {% if country_code and coordinate and temp and pressure and humidity %}
-            <h2>
-                {{country_code}}
-                <h3>
-                    {{description}} | Humidity: {{humidity}}%
-                </h3>
-            </h2>
-            <h1>
-                {{temp}}
+            <h2>{{country_code}}</h2>
+            <h1>{{temp}} &deg;</h1>
+            <h3>Humidity: {{humidity}}%</h3>
+            <h3>Coordinates [X,Y] : {{coordinate}}</h3>
+            <h3>Pressure : {{pressure}}</h3>
+            <h3>Forecast : {{main}}
                 <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="Image" style="width:70px">
-            </h1>
+            </h3>
+            <h3>Description : {{description}}</h3>
+            {% endif %}
             <div class="sky">
                 <div class="sun"></div>
                 <div class="cloud">
@@ -485,65 +62,26 @@ tr:nth-child(3) {
                     <div class="circle-tall"></div>
                     <div class="circle-medium"></div>
                 </div>
-            </div>
-            <table>
-                <tr>
-                    <td>TUE</td>
-                    <td>WED</td>
-                    <td>THU</td>
-                    <td>FRI</td>
-                    <td>SAT</td>
-                </tr>
-                <tr>
-                    <td>30°</td>
-                    <td>34°</td>
-                    <td>36°</td>
-                    <td>34°</td>
-                    <td>37°</td>
-                </tr>
-                <tr>
-                    <td>17°</td>
-                    <td>22°</td>
-                    <td>19°</td>
-                    <td>23°</td>
-                    <td>19°</td>
-                </tr>
-            </table>
-            {% endif %}
-        </div>
-        <!--
-        <div class="row">
-            {% if country_code and coordinate and temp and pressure and humidity %}
-            <div class="col d-flex justify-content-center">
-                <div class=" card text-white bg-light mb-6">
-                    <div class=" card-body">
-                        <h4><span class="badge badge-primary">Country Code :</span> {{country_code}}</h4>
-                        <h4><span class="badge badge-primary">Coordinates [X,Y] :</span> {{coordinate}}</h4>
-                        <h4><span class="badge badge-primary">Temperature in Celsius :</span> {{temp}}</h4>
-                        <h4><span class="badge badge-primary">Pressure :</span> {{pressure}} </h4>
-                        <h4><span class="badge badge-primary">Humidity : </span> {{humidity}}</h4>
-                        <h4><span class="badge badge-primary">Forecast : </span> {{main}} <img
-                                src="http://openweathermap.org/img/w/{{icon}}.png" alt="Image" style="width:70px"></h4>
-                        <h4><span class="badge badge-primary">Description : </span> {{description}}</h4>
-                    </div>
-                    {% endif %}
-                </div>
+
             </div>
         </div>
-        -->
     </section>
-    <!--
-    <footer>
-        <nav class="navbar navbar-dark bg-primary" style="height:100%;">
-            <div class="container">
-                <div class="w3-display-middle">
-                    <p class="navbar-brand" >
-                        &copy; J.Ghannoum-2021
-                    </p>
+    <footer class="mainFooter">
+        <nav class="navbar navbar-dark bg-primary" id="navBar">
+            <div class="container-fluid container">
+                <p class="navbar-brand">
+                    &copy; J.Ghannoum-2021
+                </p>
+                <div class="social-menu">
+                    <ul>
+                        <li><a href="https://www.facebook.com/jihade.ghanoum"><i class="fab fa-facebook" target="blank"></i></a></li>
+                        <li><a href="https://www.instagram.com/gh_jihad/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/jihad-ghannoum/"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://github.com/Ghannoum99"><i class="fab fa-github"></i></i></a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </footer>
-    -->
     </body>
 </html>
