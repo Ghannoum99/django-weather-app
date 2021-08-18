@@ -1,5 +1,4 @@
-# Weather Desktop App using Django
-
+# Django-weather-app
 
 <div>
      <img src="https://github.com/Ghannoum99/django-weather-app/blob/main/Weather_app.png">
