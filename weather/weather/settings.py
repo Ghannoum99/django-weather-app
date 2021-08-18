@@ -25,7 +25,7 @@ SECRET_KEY = '6^@3=m4n8%+m+&78+9wwfgx-e2uug2h53@gxm_w=@itsx68ke3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://jghannoum-weather-app.herokuapp.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
