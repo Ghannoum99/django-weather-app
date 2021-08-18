@@ -30,9 +30,9 @@ def index(request):
             data = {}
         return render(request, 'weather_app/weather.html', data)
     except HTTPError:
-        return HttpResponse('Hi')
+        return HttpResponse('<h1>an error has occurred</h1>')
     except InvalidURL:
-        return HttpResponse('Hi')
+        return HttpResponse('<h1>an error has occurred</h1>')
     except UnicodeEncodeError:
-        return HttpResponse('Hi')
+        return HttpResponse('<h1>an error has occurred</h1>')
 
