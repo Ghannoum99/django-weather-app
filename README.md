@@ -1,5 +1,10 @@
 # Weather Desktop App using Django
 
+
+<div>
+     <img src="https://github.com/Ghannoum99/django-weather-app/blob/main/Weather_app.png">
+</div>
+
 ## Setup
 
 The first thing to do is to clone the repository:
